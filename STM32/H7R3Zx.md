@@ -132,6 +132,8 @@ it requires same `MPU` configurations to avoid `Memory management fault` excepti
 
 ### Clock configuration.
 
+![Clock configuration #1](./H7R3Zx/clock_1.png)
+
 1. Set `DIVM1` in `PLL` to `/16`.
 2. Set `DIVN1` to `X 300`.
 3. Set all `DIVx1` to `/2` --> then, `SYSCLK` will be `600 MHz`.
@@ -145,6 +147,8 @@ it requires same `MPU` configurations to avoid `Memory management fault` excepti
 11. Set `PPRE1`, `PPRE2`, `PPRE4`, `PPRE5` to `/2`.
 12. So, `xxx Peripheral Clocks` becomes to `150 MHz`.
 13. And, Cube IDE will set `X 2` for `Timer Clocks`, so becomes to `300 MHz`.
+
+![Clock configuration #2](./H7R3Zx/clock_2.png)
 
 Commonly, `W25Qxx` series can work well up to `100 MHz`.
 So, Both `/6` (100 MHz) and `/7` (85.714 MHz) for `DIVS2` are compatible.
