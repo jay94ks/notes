@@ -331,3 +331,18 @@ int main(void) {
   /* USER CODE END 3 */
 }
 ```
+
+## Configure `Debug` in STM32CubeIDE.
+
+you must run debug nin `XXXX_Appli` project in STM32CubeIDE.
+
+open `Debug Configuration` window by:
+1) right click on project, `XXXX_Appli`.
+2) click `Debug As` and `Debug configurations`.
+3) click `Debugger` tab.
+4) scroll down and see `External loaders`.
+5) add `ExtMemLoader` project to `External loaders` --> this is automatically done by STM32CubeIDE.
+6) if `Initialize` is `false` for 6th loader, click it and `Edit` button, then, enable `Initialize`.
+7) click `Startup` tab.
+8) add `Boot` project to `Load Image and Symbols` list.
+9) now, you can debug the application by clicking `Debug` or `Run` icons in tool bar.
